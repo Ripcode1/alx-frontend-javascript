@@ -19,16 +19,16 @@ function printTeacher({ firstName, lastName }: { firstName: string; lastName: st
   return `${firstName}. ${lastName}`;
 }
 
-interface StudentConstructor {
-  new (firstName: string, lastName: string): StudentClassInterface;
-}
-
 interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
 }
 
-class StudentClass implements StudentClassInterface {
+interface StudentConstructor {
+  new (firstName: string, lastName: string): StudentClassInterface;
+}
+
+class StudentClass {
   firstName: string;
   lastName: string;
 
