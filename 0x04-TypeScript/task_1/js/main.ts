@@ -15,8 +15,8 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-function printTeacher(firstName: string, lastName: string): string {
-  return `${firstName.charAt(0)}. ${lastName}`;
+function printTeacher({ firstName, lastName }: { firstName: string; lastName: string }): string {
+  return `${firstName}. ${lastName}`;
 }
 
 interface StudentConstructor {
