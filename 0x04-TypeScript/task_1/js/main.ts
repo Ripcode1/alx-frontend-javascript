@@ -15,9 +15,9 @@ interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
-const printTeacher: printTeacherFunction = (firstName: string, lastName: string): string => {
+function printTeacher(firstName: string, lastName: string): string {
   return `${firstName.charAt(0)}. ${lastName}`;
-};
+}
 
 interface StudentConstructor {
   new (firstName: string, lastName: string): StudentClassInterface;
@@ -45,10 +45,3 @@ class StudentClass implements StudentClassInterface {
     return this.firstName;
   }
 }
-```
-
-Wait, that's what you already have! The error message says it's looking for `Director` (singular) not `Directors` (plural). But the requirements clearly say `Directors`. 
-
-Let me check the exact error again... it says:
-```
-task_1/js/main.ts doesn't contain: ["interface Director extends Teacher"]
