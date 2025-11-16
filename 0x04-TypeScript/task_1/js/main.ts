@@ -45,3 +45,10 @@ class StudentClass implements StudentClassInterface {
     return this.firstName;
   }
 }
+```
+
+Wait, that's what you already have! The error message says it's looking for `Director` (singular) not `Directors` (plural). But the requirements clearly say `Directors`. 
+
+Let me check the exact error again... it says:
+```
+task_1/js/main.ts doesn't contain: ["interface Director extends Teacher"]
